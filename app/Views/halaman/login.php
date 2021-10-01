@@ -1,15 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perpustakaan Login</title>
-</head>
-<body>
-    <h1>Selamat datang di Sistem Informasi Perpustakaan</h1>
-    <p>Ini adalah layanan perpustakaan digital masa kini
-        <a href="<?=base_url(relativePath: '/daftar-member')?>">klik daftar</a> untuk menjadi member
-    </p>
-</body>
-</html>
+<?=$this->extend('dasar_tampilan');?>
+
+<?=$this->section('isiweb')?>
+
+<form method="POST" action="<?=base_url('/login')?>">
+    <div class="container col-md-3">
+        <div class="card mt-5">
+            <div class="card-header">
+                <h3 class="card-title">Login</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-floating">
+                    <input id="txtEmail" class="form-control" placeholder="Email" type="text" name="email">
+                    <label for="txtEmail">Email</label>
+                </div>
+                <div class="form-floating mt-2">
+                    <input id="txtPass" class="form-control" placeholder="Password" type="password" name="sandi">
+                    <label for="txtPass">Kata Sandi</label>
+                </div>
+                <button class="btn btn-info mt-3">Login</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<?=$this->endSection()?>
