@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class Pengguna extends Model
 {
     protected $DBGroup              = 'koneksiku';
-    protected $table                = 'pengguna';
+    protected $table                = 'pengguna_12200964';
     protected $primaryKey           = 'id';
     protected $useAutoIncrement     = true;
     protected $returnType           = 'array';
