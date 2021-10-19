@@ -40,7 +40,7 @@ class BaseController extends Controller
 
 
     /**
-     * @var Session.
+     * @var Session
      */
     protected $session;
     /**
