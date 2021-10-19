@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 
-use App\Models\Pengguna;
+use App\Models\PenggunaModel_12200964;
 use CodeIgniter\Model;
 use Config\Services;
 
@@ -29,14 +29,15 @@ class Login extends BaseController{
 
         if ($v == false) {
             $this->session->setFlashdata('validator',$this->validator);
-            return redirect()->to('/login')->with('error', 'User dan sandi salah');
+            return redirect()->to('/login');
         }else {
 
-            $vl = (new Pengguna())->cekLogin($email, $sandi);
+            $vl = (new PenggunaModel_12200964())->cekLogin($email, $sandi);
 
             if ($vl == null) {
-                return redirect()->to('/login');
+                return redirect()->to('/login')->with('error', 'User dan sandi salah');
             }else {
+                $this->session->set('sudahLogin', true);
                 return redirect()->to('/beranda');
             }
         }

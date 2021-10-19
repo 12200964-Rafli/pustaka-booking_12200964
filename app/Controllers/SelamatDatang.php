@@ -12,7 +12,8 @@ class SelamatDatang extends BaseController{
         return view('halaman/login',[
             'vd' => $this->session->getFlashdata('validator'),
             'email' => $this->session->get('email'),
-            'sandi' => $this->session->get('sandi')
+            'sandi' => $this->session->get('sandi'),
+            'error' => $this->session->getFlashdata('error')
         ]);
     }
     public function daftar_member(){
