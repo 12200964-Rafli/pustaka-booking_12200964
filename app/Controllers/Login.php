@@ -44,5 +44,6 @@ class Login extends BaseController{
     }
     
     public function beranda(){
-}
+        
+    }
 }
